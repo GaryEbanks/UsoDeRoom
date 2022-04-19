@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.practicaroom.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/go_to_addClasificacionFragment"
+            app:destination="@id/addClasificacionFragment" />
+        <action
+            android:id="@+id/go_to_viewClasificacionFragment"
+            app:destination="@id/viewClasificacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewClasificacionFragment"
+        android:name="com.example.practicaroom.ViewClasificacionFragment"
+        android:label="fragment_view_clasificacion"
+        tools:layout="@layout/fragment_view_clasificacion" />
+    <fragment
+        android:id="@+id/addClasificacionFragment"
+        android:name="com.example.practicaroom.AddClasificacionFragment"
+        android:label="fragment_add_clasificacion"
+        tools:layout="@layout/fragment_add_clasificacion" >
+        <action
+            android:id="@+id/go_viewClasificacionFragment"
+            app:destination="@id/viewClasificacionFragment" />
+    </fragment>
+</navigation>
